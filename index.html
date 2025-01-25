@@ -34,10 +34,18 @@
       background-color: #000;
       color: white;
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Center content horizontally */
       align-items: center;
-      padding: 10px 20px;
+      padding: 10px 0;
       z-index: 999;
+    }
+
+    .navbar .navbar-container {
+      width: 100%;
+      max-width: 1200px; /* Limit the width of navbar content */
+      display: flex;
+      justify-content: space-between; /* Spread the content to edges */
+      padding: 0 20px; /* Add some space on the sides */
     }
 
     .navbar .logo {
@@ -58,7 +66,7 @@
     .navbar .nav-links a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
     }
 
     .navbar .nav-links a:hover {
@@ -127,8 +135,20 @@
       background-color: #2d2d2d;
       color: white;
       text-align: center;
-      padding: 16px 0;
+      padding: 40px 0 16px 0;
       font-size: 0.875rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Footer Logo */
+    .footer-logo {
+      margin-bottom: 10px; /* Space between logo and text */
+    }
+
+    .footer-logo img {
+      height: 50px; /* Adjust size of the logo */
     }
 
     /* Sections */
@@ -158,13 +178,15 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="taksi_logo.png" alt="Taksifirma Logo">
-    </div>
-    <div class="nav-links">
-      <a href="#palvelut">Palvelut</a>
-      <a href="#hinnasto">Hinnasto</a>
-      <a href="#yhteystiedot">Yhteystiedot</a>
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="taksi_logo.png" alt="Taksifirma Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#palvelut">Palvelut</a>
+        <a href="#hinnasto">Hinnasto</a>
+        <a href="#yhteystiedot">Yhteystiedot</a>
+      </div>
     </div>
   </nav>
 
@@ -199,6 +221,9 @@
 
   <!-- Footer -->
   <footer>
+    <div class="footer-logo">
+      <img src="taksi_logo.png" alt="Taksifirma Logo">
+    </div>
     <p>© 2025 Taksi Timo Mäkinen</p>
   </footer>
 </body>
