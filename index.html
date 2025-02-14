@@ -1,234 +1,66 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taksi Timo Mäkinen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #ffcc00;
-      color: black;
-      text-align: center;
-      padding: 10px 0;
-      z-index: 1000;
-      font-weight: bold;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 40px;
-      width: 100%;
-      background-color: #000;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 0;
-      z-index: 999;
-    }
-
-    .navbar .navbar-container {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
-    }
-
-    .navbar .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .navbar .nav-links {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-    }
-
-    .navbar .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('taksi_hero.png') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 80px;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-content {
-      text-align: center;
-      color: white;
-      padding: 0 16px;
-      max-width: 1200px;
-    }
-
-    .hero-content h1 {
-      font-size: 4.8rem;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    .hero-content p {
-      font-size: 1.8rem;
-      margin-bottom: 40px;
-    }
-
-    .cta-button {
-      background-color: #ffcc00;
-      color: black;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      border-radius: 2px;
-
-    }
-
-    .cta-button:hover {
-      background-color: #e6b800;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #2d2d2d;
-      color: white;
-      text-align: center;
-      padding: 40px 0 16px 0;
-      font-size: 0.875rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .footer-logo {
-      margin-bottom: 10px;
-    }
-
-    .footer-logo img {
-      height: 50px;
-    }
-
-    /* Sections */
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    #palvelut {
-      background-color: #f7f7f7;
-    }
-
-    #hinnasto {
-      background-color: #eeeeee;
-    }
-
-    #yhteystiedot {
-      background-color: #f7f7f7;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperkani</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    Tilaa taksi 0400 244 186
-  </div>
+    <!-- Ylävalikko -->
+    <header>
+        <div class="navbar">
+            <a href="#"><img src="taksi_logo.png" alt="Hyperkani Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#palvelut">Palvelut</a></li>
+                    <li><a href="#hinnasto">Hinnasto</a></li>
+                    <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+                    <li><a href="#meistä">Meistä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <img src="taksi_logo.png" alt="Taksifirma Logo">
-      </div>
-      <div class="nav-links">
-        <a href="#palvelut">Palvelut</a>
-        <a href="#hinnasto">Hinnasto</a>
-        <a href="#yhteystiedot">Yhteystiedot</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Pääbanneri -->
+    <section class="banner">
+        <div class="container">
+            <img src="taksi_logo.png" alt="Hyperkani Logo" class="banner-logo"> <!-- Replaced h1 with logo -->
+            <p class="banner-text">Luotettavaa ja nopeaa palvelua vuodesta 2001.</p>
+            <div class="down-arrow"></div> <!-- Added down arrow -->
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h1>Taksi Timo Mäkinen</h1>
-        <p>Luotettavaa ja nopeaa palvelua vuodesta 2001</p>
-        <a href="#yhteystiedot" class="cta-button">Ota yhteyttä</a>
-      </div>
-    </div>
-  </div>
+    <!-- Uusi osio -->
+    <section class="new-section">
+        <div class="container">
+            <h1>IMAGE 1</h1>
+        </div>
+    </section>
 
-  <!-- Content Sections -->
-  <div id="palvelut" class="section">
-    <h2>Palvelut</h2>
-    <p>Tarjoamme luotettavia ja nopeita taksipalveluja ympäri vuorokauden. Käytössämme on erikokoisia ajoneuvoja, jotka sopivat niin yksityisille kuin yrityksille.</p>
-  </div>
+        <!-- Uusi osio -->
+    <section class="new-section2">
+        <div class="container">
+            <h1>IMAGE 2</h1>
+        </div>
+    </section>
 
-  <div id="hinnasto" class="section">
-    <h2>Hinnasto</h2>
-    <p>Meidän hintamme ovat kilpailukykyisiä ja läpinäkyviä. Ota yhteyttä saadaksesi tarkempia tietoja hinnoistamme ja tarjouksistamme.</p>
-  </div>
+            <!-- Uusi osio -->
+    <section class="new-section3">
+        <div class="container">
+            <h1>IMAGE 3</h1>
+        </div>
+    </section>
 
-  <div id="yhteystiedot" class="section">
-    <h2>Yhteystiedot</h2>
-    <p>Voit ottaa meihin yhteyttä puhelimitse tai sähköpostitse. Vastaamme kaikkiin kysymyksiisi nopeasti ja ystävällisesti.</p>
-    <p>Puhelin: 0400 244 186</p>
-    <p>Sähköposti: info@taksifirma.fi</p>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">
-      <img src="taksi_logo.png" alt="Taksifirma Logo">
-    </div>
-    <p>© 2025 Taksi Timo Mäkinen</p>
-    <p>Nettisivut: Vilma Mäkinen</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Taksi Timo Mäkinen. Kaikki oikeudet pidätetään.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>
+
